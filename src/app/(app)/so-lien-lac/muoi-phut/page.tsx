@@ -43,13 +43,13 @@ export default function MuoiPhutPage() {
     <div className="bg-vh-bg min-h-screen" style={{ animation: "slide-up-enter 0.3s ease-out both" }}>
 
       {/* Header */}
-      <div className="bg-vh-blue-dark px-4 pt-10 pb-4 flex items-center gap-3">
+      <div className="bg-vh-orange px-4 pt-10 pb-4 flex items-center gap-3">
         <Link href="/so-lien-lac" className="p-1.5 bg-white/15 rounded-xl">
           <ChevronLeft size={20} className="text-white" />
         </Link>
         <div>
           <h1 className="text-white font-black text-base">⏱ 10 phút cùng con</h1>
-          <p className="text-blue-200 text-xs">{skill.name} · {skill.subject}</p>
+          <p className="text-white/70 text-xs">{skill.name} · {skill.subject}</p>
         </div>
       </div>
 

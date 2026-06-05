@@ -30,18 +30,18 @@ export default function HomePage() {
       <AppHeader showAvatar />
 
       {/* Blue greeting area */}
-      <div className="bg-vh-blue-dark px-4 pb-6 pt-1">
+      <div className="bg-vh-orange px-4 pb-6 pt-1">
         <div className="flex items-start justify-between">
           <div>
-            <p className="text-blue-200 text-sm">Buổi tối,</p>
+            <p className="text-white/70 text-sm">Buổi tối,</p>
             <h2 className="text-white text-xl font-black mt-0.5">Minh Anh ✨</h2>
           </div>
           <div className="bg-white/10 rounded-2xl px-3 py-2 text-center">
-            <div className="flex items-center gap-1 text-vh-orange">
-              <Flame size={14} />
+            <div className="flex items-center gap-1">
+              <Flame size={14} className="text-white" />
               <span className="text-white font-black text-lg leading-none">12</span>
             </div>
-            <p className="text-blue-200 text-[10px] mt-0.5">ngày liên tiếp</p>
+            <p className="text-white/70 text-[10px] mt-0.5">ngày liên tiếp</p>
           </div>
         </div>
 
@@ -54,7 +54,7 @@ export default function HomePage() {
           ].map((s) => (
             <div key={s.label} className="flex-1 bg-white/10 rounded-xl p-2 text-center">
               <p className="text-white font-black text-base leading-none">{s.value}</p>
-              <p className="text-blue-200 text-[10px] mt-1">{s.label}</p>
+              <p className="text-white/70 text-[10px] mt-1">{s.label}</p>
             </div>
           ))}
         </div>

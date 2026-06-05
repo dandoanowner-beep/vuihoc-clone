@@ -140,7 +140,7 @@ export default function QuizPage() {
     <div className="bg-vh-bg min-h-screen">
 
       {/* Header */}
-      <div className="bg-vh-blue-dark px-4 pt-10 pb-4">
+      <div className="bg-vh-orange px-4 pt-10 pb-4">
         <div className="flex items-center justify-between mb-3">
           <Link href="/so-lien-lac/muoi-phut" className="p-1.5 bg-white/15 rounded-xl">
             <ChevronLeft size={20} className="text-white" />

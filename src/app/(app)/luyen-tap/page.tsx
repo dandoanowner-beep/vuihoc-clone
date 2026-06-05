@@ -55,19 +55,19 @@ export default function LuyenTapPage() {
       <AppHeader title="Luyện tập" back />
 
       {/* Header stats */}
-      <div className="bg-vh-blue-dark px-4 pb-4 pt-1">
+      <div className="bg-vh-orange px-4 pb-4 pt-1">
         <div className="flex items-center gap-3">
           <div className="flex-1 bg-white/10 rounded-xl p-3 text-center">
             <p className="text-white font-black text-xl">12</p>
-            <p className="text-blue-200 text-[10px] mt-0.5">ngày liên tiếp</p>
+            <p className="text-white/70 text-[10px] mt-0.5">ngày liên tiếp</p>
           </div>
           <div className="flex-1 bg-white/10 rounded-xl p-3 text-center">
             <p className="text-white font-black text-xl">85%</p>
-            <p className="text-blue-200 text-[10px] mt-0.5">độ chính xác</p>
+            <p className="text-white/70 text-[10px] mt-0.5">độ chính xác</p>
           </div>
           <div className="flex-1 bg-white/10 rounded-xl p-3 text-center">
             <p className="text-white font-black text-xl">240</p>
-            <p className="text-blue-200 text-[10px] mt-0.5">bài đã làm</p>
+            <p className="text-white/70 text-[10px] mt-0.5">bài đã làm</p>
           </div>
         </div>
       </div>

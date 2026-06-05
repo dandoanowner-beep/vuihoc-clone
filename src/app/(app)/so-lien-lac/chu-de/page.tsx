@@ -53,13 +53,13 @@ export default function ChuDePage() {
     <div className="bg-vh-bg min-h-screen" style={{ animation: "slide-up-enter 0.3s ease-out both" }}>
 
       {/* Header */}
-      <div className="bg-vh-blue-dark px-4 pt-10 pb-4 flex items-center gap-3">
+      <div className="bg-vh-orange px-4 pt-10 pb-4 flex items-center gap-3">
         <Link href="/so-lien-lac" className="p-1.5 bg-white/15 rounded-xl">
           <ChevronLeft size={20} className="text-white" />
         </Link>
         <div>
           <h1 className="text-white font-black text-base">💬 Trò chuyện tối nay</h1>
-          <p className="text-blue-200 text-xs">AI gợi ý chủ đề từ bài học hôm nay</p>
+          <p className="text-white/70 text-xs">AI gợi ý chủ đề từ bài học hôm nay</p>
         </div>
       </div>
 

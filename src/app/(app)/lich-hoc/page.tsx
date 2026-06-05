@@ -79,7 +79,7 @@ export default function LichHocPage() {
       <AppHeader title="Lịch học" back />
 
       {/* Week strip */}
-      <div className="bg-vh-blue-dark px-4 pb-4 pt-1">
+      <div className="bg-vh-orange px-4 pb-4 pt-1">
         <div className="flex gap-1">
           {days.map((d, i) => (
             <div
@@ -88,12 +88,12 @@ export default function LichHocPage() {
                 i === 1 ? "bg-white" : "bg-white/10"
               }`}
             >
-              <span className={`text-[10px] font-semibold ${i === 1 ? "text-vh-sub" : "text-blue-200"}`}>{d}</span>
-              <span className={`text-sm font-black mt-0.5 ${i === 1 ? "text-vh-blue" : "text-white"}`}>
+              <span className={`text-[10px] font-semibold ${i === 1 ? "text-vh-sub" : "text-white/70"}`}>{d}</span>
+              <span className={`text-sm font-black mt-0.5 ${i === 1 ? "text-vh-orange" : "text-white"}`}>
                 {dates[i]}
               </span>
               {(i === 1 || i === 3 || i === 4 || i === 5) && (
-                <span className={`w-1 h-1 rounded-full mt-1 ${i === 1 ? "bg-vh-blue" : "bg-blue-300"}`} />
+                <span className={`w-1 h-1 rounded-full mt-1 ${i === 1 ? "bg-vh-orange" : "bg-white/50"}`} />
               )}
             </div>
           ))}

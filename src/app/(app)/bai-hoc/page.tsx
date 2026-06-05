@@ -53,15 +53,15 @@ export default function BaiHocPage() {
       <AppHeader title="Bài học" back />
 
       {/* Subject tabs */}
-      <div className="bg-vh-blue-dark px-4 pb-4 pt-1">
+      <div className="bg-vh-orange px-4 pb-4 pt-1">
         <div className="flex gap-2">
           {subjects.map((s) => (
             <button
               key={s.id}
               className={`flex items-center gap-1.5 px-3 py-2 rounded-xl text-sm font-bold transition-colors ${
                 s.active
-                  ? "bg-white text-vh-blue"
-                  : "bg-white/15 text-blue-100"
+                  ? "bg-white text-vh-orange"
+                  : "bg-white/15 text-white/80"
               }`}
             >
               <span>{s.emoji}</span>
@@ -74,11 +74,11 @@ export default function BaiHocPage() {
         <div className="mt-3 bg-white/10 rounded-xl p-3 flex items-center gap-3">
           <div className="flex-1">
             <p className="text-white text-sm font-bold">Toán lớp 4</p>
-            <p className="text-blue-200 text-xs">8/16 chương · 24/48 bài học</p>
+            <p className="text-white/70 text-xs">8/16 chương · 24/48 bài học</p>
           </div>
           <div className="text-right">
             <p className="text-white font-black text-lg">50%</p>
-            <p className="text-blue-200 text-[10px]">hoàn thành</p>
+            <p className="text-white/70 text-[10px]">hoàn thành</p>
           </div>
         </div>
 
