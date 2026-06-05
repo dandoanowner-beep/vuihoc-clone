@@ -136,7 +136,7 @@ export default function MuoiPhutPage() {
           >
             Bắt đầu kiểm tra 🚀
           </Link>
-          <p className="text-center text-xs text-vh-sub mt-2">10 câu hỏi · Duolingo style · ~5 phút</p>
+          <p className="text-center text-xs text-vh-sub mt-2">10 câu hỏi · ~5 phút</p>
         </div>
 
         <div className="h-2" />
