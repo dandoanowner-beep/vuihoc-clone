@@ -36,6 +36,8 @@ const dandoItems = [
   "Nhắc con đọc kỹ đề bài trước khi tính — không cần vội.",
   'Sau mỗi phép chia, hỏi con: "Số dư có nhỏ hơn số chia không?"',
   "Khen ngợi con khi con tự sửa lỗi, không chỉ khi làm đúng.",
+  "Học 2 buổi live môn toán học cùng cô Thủy.",
+  "Làm BTVN đầy đủ.",
 ];
 
 const schedule = [
