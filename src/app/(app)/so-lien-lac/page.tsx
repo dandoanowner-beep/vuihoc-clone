@@ -26,11 +26,6 @@ const indicators = [
   { key: "consistency", label: "Đều đặn",            emoji: "📅", value: 88, color: "#7C3AED", bg: "#EDE9FE" },
 ];
 
-const aiCommentByPeriod: Record<string, string> = {
-  ngay: "Minh Anh hôm nay hoàn thành 1 buổi luyện tập, nỗ lực tốt (82%) nhưng chỉ số tập trung còn thấp (58%) — bé hay làm vội. Điểm 7.5 là ổn, cần chú ý kiểm tra lại bước tính số dư.",
-  tuan: "Minh Anh tuần này rất chăm chỉ — duy trì đều đặn 88% và nỗ lực đáng khen (82%). Điểm 7.5 là kết quả ổn, nhưng bé đang có xu hướng đoán mò ở phần Phép chia có dư (tập trung chỉ đạt 58%). Chỉ cần luyện thêm 10 phút là con sẽ vượt ngưỡng 8 điểm!",
-  thang: "Tháng này Minh Anh duy trì học đều đặn (88%), điểm trung bình cả tháng đạt 7.5/10. Điểm mạnh: phép nhân và đọc hiểu. Cần cải thiện: phép chia có dư và chính tả. Xu hướng tập trung đang giảm nhẹ — ba mẹ chú ý nhắc con làm chậm lại và kiểm tra kết quả.",
-};
 
 const dandoItems = [
   "Nhắc con đọc kỹ đề bài trước khi tính — không cần vội.",
@@ -67,6 +62,12 @@ function SoLienLacContent() {
   const searchParams = useSearchParams();
   const SCORE = parseFloat(searchParams.get("score") ?? "7.5");
   const starCount = SCORE >= 9 ? 5 : SCORE >= 8 ? 4 : SCORE >= 7 ? 3 : SCORE >= 6 ? 2 : 1;
+  const scoreStr = SCORE.toLocaleString("vi-VN");
+  const aiCommentByPeriod: Record<string, string> = {
+    ngay: `Minh Anh hôm nay hoàn thành 1 buổi luyện tập, nỗ lực tốt (82%) nhưng chỉ số tập trung còn thấp (58%) — bé hay làm vội. Điểm ${scoreStr} là ổn, cần chú ý kiểm tra lại bước tính số dư.`,
+    tuan: `Minh Anh tuần này rất chăm chỉ — duy trì đều đặn 88% và nỗ lực đáng khen (82%). Điểm ${scoreStr} là kết quả ổn, nhưng bé đang có xu hướng đoán mò ở phần Phép chia có dư (tập trung chỉ đạt 58%). Chỉ cần luyện thêm 10 phút là con sẽ vượt ngưỡng 8 điểm!`,
+    thang: `Tháng này Minh Anh duy trì học đều đặn (88%), điểm trung bình cả tháng đạt ${scoreStr}/10. Điểm mạnh: phép nhân và đọc hiểu. Cần cải thiện: phép chia có dư và chính tả. Xu hướng tập trung đang giảm nhẹ — ba mẹ chú ý nhắc con làm chậm lại và kiểm tra kết quả.`,
+  };
 
   const [mounted, setMounted] = useState(false);
   const [period, setPeriod] = useState<Period>("tuan");
