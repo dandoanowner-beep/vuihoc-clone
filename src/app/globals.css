@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@theme {
+  --color-vh-blue: #1469B4;
+  --color-vh-blue-dark: #0D4A8A;
+  --color-vh-blue-mid: #2B84E0;
+  --color-vh-blue-light: #DBEAFE;
+  --color-vh-blue-bg: #EFF6FF;
+  --color-vh-orange: #F97316;
+  --color-vh-orange-dark: #EA580C;
+  --color-vh-orange-light: #FFF7ED;
+  --color-vh-green: #16A34A;
+  --color-vh-green-light: #DCFCE7;
+  --color-vh-yellow: #D97706;
+  --color-vh-yellow-light: #FEF3C7;
+  --color-vh-red: #DC2626;
+  --color-vh-red-light: #FEE2E2;
+  --color-vh-bg: #F0F6FF;
+  --color-vh-card: #FFFFFF;
+  --color-vh-text: #1F2937;
+  --color-vh-sub: #6B7280;
+  --font-sans: var(--font-nunito), 'Nunito', 'Inter', system-ui, sans-serif;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background-color: #F0F6FF;
+  color: #1F2937;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@keyframes bounce-in-scale {
+  0%   { opacity: 0; transform: scale(0.3); }
+  55%  { opacity: 1; transform: scale(1.12); }
+  75%  { transform: scale(0.93); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slide-up-enter {
+  from { opacity: 0; transform: translateY(48px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes count-ping {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.08); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(-2deg); }
+  50%       { transform: translateY(-12px) rotate(2deg); }
+}
+
+@keyframes gift-shake {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  20%       { transform: rotate(-10deg) scale(1.05); }
+  40%       { transform: rotate(10deg) scale(1.05); }
+  60%       { transform: rotate(-6deg) scale(1.02); }
+  80%       { transform: rotate(6deg) scale(1.02); }
+}
+
+@keyframes prize-pop {
+  0%   { opacity: 0; transform: scale(0) translateY(40px); }
+  65%  { opacity: 1; transform: scale(1.25) translateY(-16px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@keyframes confetti-drop {
+  0%   { opacity: 1; transform: translateY(-20px) rotate(0deg) scale(1); }
+  80%  { opacity: 1; }
+  100% { opacity: 0; transform: translateY(380px) rotate(600deg) scale(0.5); }
+}
+
+@keyframes celebrate-text {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.06); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
