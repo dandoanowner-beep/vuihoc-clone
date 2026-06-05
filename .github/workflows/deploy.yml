@@ -25,16 +25,14 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
           cache: npm
-          cache-dependency-path: vuihoc-clone/package-lock.json
+          cache-dependency-path: package-lock.json
 
       - name: Install dependencies
-        working-directory: vuihoc-clone
         run: npm ci
 
       - name: Build
-        working-directory: vuihoc-clone
         env:
           NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
         run: npm run build
@@ -43,7 +41,7 @@ jobs:
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: vuihoc-clone/out
+          path: out
 
       - uses: actions/deploy-pages@v4
         id: deployment
